@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Countdowns</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <div class="page">
+
+        <main class="main-content">
+
+            <div class="top-bar">
+
+                <div>
+                    <p class="small-title">
+                        MY COUNTDOWNS
+                    </p>
+
+                    <h1>
+                        Upcoming Events
+                    </h1>
+                </div>
+
+
+                <button
+                    id="addEventButton"
+                    class="primary-button"
+                >
+                    + Add Event
+                </button>
+
+            </div>
+
+
+            <div
+                id="eventsContainer"
+                class="events-container"
+            >
+            </div>
+
+
+            <div
+                id="emptyState"
+                class="empty-state"
+            >
+
+                <div class="empty-icon">
+                    ⏳
+                </div>
+
+                <h2>
+                    No events yet
+                </h2>
+
+                <p>
+                    Add your first event and start counting down.
+                </p>
+
+                <button
+                    id="emptyAddButton"
+                    class="primary-button"
+                >
+                    + Add Event
+                </button>
+
+            </div>
+
+        </main>
+
+
+
+        <aside class="clock-panel">
+
+            <p class="clock-label">
+                LOCAL TIME
+            </p>
+
+
+            <div class="analog-clock">
+
+                <span class="clock-number number-12">
+                    12
+                </span>
+
+                <span class="clock-number number-3">
+                    3
+                </span>
+
+                <span class="clock-number number-6">
+                    6
+                </span>
+
+                <span class="clock-number number-9">
+                    9
+                </span>
+
+
+                <div
+                    id="hourHand"
+                    class="clock-hand hour-hand"
+                ></div>
+
+                <div
+                    id="minuteHand"
+                    class="clock-hand minute-hand"
+                ></div>
+
+                <div
+                    id="secondHand"
+                    class="clock-hand second-hand"
+                ></div>
+
+                <div class="clock-center"></div>
+
+            </div>
+
+
+            <div
+                id="digitalClock"
+                class="digital-clock"
+            >
+                00:00:00
+            </div>
+
+
+            <div
+                id="dayName"
+                class="day-name"
+            >
+                Monday
+            </div>
+
+
+            <div
+                id="fullDate"
+                class="full-date"
+            >
+                January 1, 2026
+            </div>
+
+
+            <div class="local-text">
+                Your local time
+            </div>
+
+        </aside>
+
+    </div>
+
+
+
+    <footer class="site-footer">
+
+        <div class="footer-glow footer-glow-left"></div>
+        <div class="footer-glow footer-glow-right"></div>
+
+
+        <div class="footer-content">
+
+            <div class="footer-brand">
+
+                <div class="footer-logo">
+                    ⏳
+                </div>
+
+                <div>
+                    <h2>
+                        Event Countdowns
+                    </h2>
+
+                    <p>
+                        Never miss an important moment.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="footer-info">
+
+                <div class="footer-info-item">
+
+                    <span class="footer-info-title">
+                        PROJECT
+                    </span>
+
+                    <span>
+                        Countdown Website
+                    </span>
+
+                </div>
+
+
+                <div class="footer-info-item">
+
+                    <span class="footer-info-title">
+                        STUDENT
+                    </span>
+
+                    <span>
+                        Ivan
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-line"></div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                ©
+                <span id="footerYear">
+                    2026
+                </span>
+                Event Countdowns.
+                All rights reserved.
+            </p>
+
+            <p class="made-by">
+                Created by
+                <span>Ivan</span>
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <div
+        id="eventModal"
+        class="modal"
+    >
+
+        <div class="modal-box">
+
+            <button
+                id="closeModalButton"
+                class="close-button"
+            >
+                ×
+            </button>
+
+
+            <h2 id="modalTitle">
+                Add Event
+            </h2>
+
+            <p class="modal-description">
+                Choose an event and its exact date.
+            </p>
+
+
+            <label>
+                Event name
+            </label>
+
+            <input
+                id="eventNameInput"
+                type="text"
+                placeholder="Example: New Year"
+            >
+
+
+            <label>
+                Event date
+            </label>
+
+            <input
+                id="eventDateInput"
+                type="date"
+            >
+
+
+            <label>
+                Event time
+            </label>
+
+            <input
+                id="eventTimeInput"
+                type="time"
+                value="00:00"
+            >
+
+
+            <div class="modal-buttons">
+
+                <button
+                    id="cancelButton"
+                    class="cancel-button"
+                >
+                    Cancel
+                </button>
+
+                <button
+                    id="saveEventButton"
+                    class="save-button"
+                >
+                    Save Event
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
